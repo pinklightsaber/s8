@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#outer-div {
+			border: solid 1px black;
+			padding: 20px;
+			width: 400px;
+			height: 300px;
+			margin: auto;
+		}
+
+		#inner-div {
+			height: 50%;
+			width: 50%;
+			border: solid 1px red;
+			padding: 20px;
+			margin: auto;
+			text-align: center;
+		}
+
+	</style>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous">
+			  	
+	</script>
+		
+</head>
+<body>
+	<div id="outer-div">
+		<div id="inner-div">
+			<button id="button"> Click me</button>
+		</div>
+	</div>
+
+	<script>
+		$("#outer-div").click(function(){
+			//alert("outer");
+		})
+		$("#inner-div").click(function(){
+			console.log(this); //inner div
+			console.log(event.target); //button es el evento
+			//alert("inner");
+		})
+		$("#button").click(function(event){
+			//event.stopPropagation();
+			
+			console.log(event.target); //button es el target
+			
+			//alert("button");
+		})
+	</script>
+	
+</body>
+</html>

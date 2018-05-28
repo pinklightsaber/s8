@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	    <script src="https://code.jquery.com/jquery-1.12.4.js"> 
+	    </script>	
+</head>
+<body>
+    <button id ="button" value="+"> + </button>
+ 	<p class="par"> hola </p>
+	
+</body>
+<script>
+	$("#button").click(function(){
+		$("body").append('<p class ="par"> hola </p>')
+	});
+
+	$('body').on('click', '.par', function(){
+		alert("hola");
+	})
+</script>
+</html>
