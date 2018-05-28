@@ -7,7 +7,9 @@ $(document).ready(function(){
 					+ '<div class="pin">'
 					+ '</div>'
 					+ text
-					+ '</div>')					
+					+ '</div>')	
+				$("#mytext").val(''); //vaciando mytext
+				$("#mytext").focus(); //enfocando mytext		
 			});
 
 			//$('.pin').on('click', function(){ >>sin delegacion
