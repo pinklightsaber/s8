@@ -4,8 +4,19 @@
 	<meta charset="UTF-8">
 	<title>To do notes</title>
 	<link rel="stylesheet" href="style.css">
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+		
 </head>
 <body>
+	<form id="myform">
+		<textarea id="mytext">
+			
+		</textarea>
+		<input type="submit" name="" value="Crear nota">
+	</form>
 	<div class="note">
 		<div class="pin">
 			
@@ -22,5 +33,20 @@
 		</div>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis porro quam provident minus explicabo quisquam dolores! Dolores eum, aut, expedita repudiandae hic id quos iste veniam. Sint fugit, mollitia consequatur.
 	</div>
+	<script>
+		$(document).ready(function(){
+			$("#myform").on('submit', function(event){
+				var text = $("#mytext").val(); //contenido del textarea
+				event.preventDefault();
+				$("body").append( //agregar notas dinamicamente con el boton
+					'<div class="note">'
+					+ '<div class="pin">'
+					+ '</div>'
+					+ text
+					+ '</div>')					
+			});
+
+		});
+	</script>
 </body>
 </html>
